@@ -13,7 +13,7 @@ RemotePowerBoot.prototype._sendCommand = function (command) {
 RemotePowerBoot.prototype.toggle = function (outlet) {
   // Commands for toggling outlets start from 1. Bring back the zero-indexed
   // sanity.
-  this._sendCommand(outlet - 1);
+  this._sendCommand(outlet + 1);
 };
 
 RemotePowerBoot.prototype.rebootAll = function () {
